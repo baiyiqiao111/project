@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Recommendation System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <span class="brand__logo">JR</span>
+        <h1 class="brand__title">Job Recommendation</h1>
+      </div>
+
+      <nav class="nav">
+        <a class="nav__link" href="#search">Search</a>
+        <a class="nav__link" href="#results">Results</a>
+        <a class="nav__link" href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 搜索区 -->
+    <section id="search" class="card section">
+      <h2 class="section__title">Search Jobs</h2>
+      <p class="section__desc">Type keywords and filters to get recommendations.</p>
+
+      <form class="form">
+        <div class="form__row">
+          <label class="form__label" for="keyword">Keyword</label>
+          <input class="form__input" id="keyword" type="text" placeholder="e.g., Backend, Java, Data Engineer" />
+        </div>
+
+        <div class="form__grid">
+          <div class="form__row">
+            <label class="form__label" for="location">Location</label>
+            <input class="form__input" id="location" type="text" placeholder="e.g., Los Angeles" />
+          </div>
+
+          <div class="form__row">
+            <label class="form__label" for="level">Level</label>
+            <select class="form__input" id="level">
+              <option value="">Any</option>
+              <option>Intern</option>
+              <option>Junior</option>
+              <option>Mid</option>
+              <option>Senior</option>
+            </select>
+          </div>
+
+          <div class="form__row">
+            <label class="form__label" for="type">Type</label>
+            <select class="form__input" id="type">
+              <option value="">Any</option>
+              <option>Full-time</option>
+              <option>Part-time</option>
+              <option>Contract</option>
+              <option>Remote</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form__actions">
+          <button class="btn btn--primary" type="button">Get Recommendations</button>
+          <button class="btn btn--ghost" type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <div class="layout">
+      <!-- 推荐结果区 -->
+      <section id="results" class="section">
+        <h2 class="section__title">Recommended Jobs</h2>
+
+        <div class="cards">
+          <article class="job-card">
+            <div class="job-card__top">
+              <h3 class="job-card__title">Java Backend Engineer</h3>
+              <span class="pill">Match 92%</span>
+            </div>
+            <p class="job-card__meta">Company A · Los Angeles · Full-time</p>
+            <p class="job-card__desc">
+              Build REST APIs, optimize MySQL queries, and work with microservices.
+            </p>
+            <div class="job-card__actions">
+              <button class="btn btn--small btn--primary" type="button">View</button>
+              <button class="btn btn--small btn--ghost" type="button">Save</button>
+            </div>
+          </article>
+
+          <article class="job-card">
+            <div class="job-card__top">
+              <h3 class="job-card__title">Data Engineer (SQL)</h3>
+              <span class="pill">Match 86%</span>
+            </div>
+            <p class="job-card__meta">Company B · Remote · Contract</p>
+            <p class="job-card__desc">
+              Data pipelines, ETL, analytics tables, and performance tuning.
+            </p>
+            <div class="job-card__actions">
+              <button class="btn btn--small btn--primary" type="button">View</button>
+              <button class="btn btn--small btn--ghost" type="button">Save</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 侧边栏：筛选/提示 -->
+      <aside class="card sidebar">
+        <h2 class="section__title">Filters</h2>
+        <ul class="list">
+          <li class="list__item">Skills: Java / SQL / HTML / CSS</li>
+          <li class="list__item">Sort: Match score</li>
+          <li class="list__item">Tip: Use more keywords for better results</li>
+        </ul>
+      </aside>
+    </div>
+
+    <section id="about" class="section">
+      <h2 class="section__title">About</h2>
+      <p class="section__desc">
+        This is a front-end mock for a job recommendation system. Later we can connect it to Java + MySQL.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>© 2025 Job Recommendation System</p>
+      <p class="muted">HTML + CSS (class selectors, box model, flexbox)</p>
+    </div>
+  </footer>
+</body>
+</html>
