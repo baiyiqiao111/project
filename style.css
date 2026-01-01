@@ -1,0 +1,182 @@
+/* ============ Base ============ */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f6f7fb;
+  color: #111;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.section { padding: 18px 0; }
+.section__title { margin: 0 0 8px; }
+.section__desc { margin: 0 0 16px; color: #444; }
+
+.muted { color: #666; }
+
+/* ============ Header ============ */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand__logo {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  color: #fff;
+  font-weight: 700;
+}
+.brand__title { font-size: 18px; margin: 0; }
+
+.nav { display: flex; gap: 12px; }
+.nav__link {
+  text-decoration: none;
+  color: #111;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+.nav__link:hover { background: #f0f0f0; }
+
+/* ============ Card / Box model ============ */
+.card {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 14px;
+  padding: 16px; /* padding = content 和 border 之间的内边距 */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+/* ============ Form ============ */
+.form { margin-top: 10px; }
+.form__grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.form__row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+  flex: 1;
+  min-width: 220px;
+}
+.form__label { font-size: 14px; color: #333; }
+.form__input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+  outline: none;
+  background: #fff;
+}
+.form__input:focus { border-color: #111; }
+
+.form__actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+/* ============ Buttons ============ */
+.btn {
+  border: 1px solid #dcdcdc;
+  background: white;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.btn--primary {
+  background: #111;
+  color: white;
+  border-color: #111;
+}
+.btn--ghost:hover { background: #f3f3f3; }
+.btn--primary:hover { opacity: 0.9; }
+
+.btn--small { padding: 8px 10px; border-radius: 10px; }
+
+/* ============ Layout (Flexbox) ============ */
+.layout {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+#results { flex: 2; }
+.sidebar { flex: 1; position: sticky; top: 16px; }
+
+/* ============ Job cards ============ */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.job-card {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 14px;
+  padding: 16px;
+}
+.job-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.job-card__title { margin: 0; font-size: 16px; }
+.job-card__meta { margin: 6px 0; color: #555; }
+.job-card__desc { margin: 0 0 12px; color: #333; }
+.job-card__actions { display: flex; gap: 8px; }
+
+.pill {
+  font-size: 12px;
+  border: 1px solid #ddd;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #f5f5f5;
+}
+
+/* ============ List ============ */
+.list { margin: 10px 0 0; padding-left: 18px; }
+.list__item { margin: 8px 0; }
+
+/* ============ Footer ============ */
+.site-footer {
+  margin-top: 24px;
+  border-top: 1px solid #e8e8e8;
+  background: white;
+}
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  .sidebar { position: static; }
+}
